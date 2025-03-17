@@ -1,0 +1,50 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "Project for task manager",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "deploy": "npm run build && gcloud functions deploy server --entry-point=server --runtime=nodejs18 --trigger-http --allow-unauthenticated"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "author": "Roberth Jumbo",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/helmet": "^4.0.0",
+    "@types/node": "^22.13.1",
+    "@types/uuid": "^10.0.0",
+    "jest-mock-extended": "^4.0.0-beta1",
+    "nodemon": "^3.1.9",
+    "serverless-google-cloudfunctions": "^4.6.0",
+    "serverless-plugin-typescript": "^2.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "compression": "^1.7.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase": "^11.2.0",
+    "firebase-admin": "^13.0.2",
+    "helmet": "^8.0.0",
+    "http-proxy-middleware": "^3.0.3",
+    "jsonwebtoken": "^9.0.2",
+    "npm-force-resolutions": "^0.0.10",
+    "reflect-metadata": "^0.2.2",
+    "routing-controllers": "^0.10.4",
+    "serverless-http": "^3.2.0",
+    "typedi": "^0.10.0",
+    "uuid": "^11.0.5"
+  }
+}
